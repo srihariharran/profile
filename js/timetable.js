@@ -146,7 +146,7 @@ else if(w==weekday[5])
 setInterval(function() {
     if((date.getHours()==9 && date.getMinutes()==0 && date.getSeconds()==0) || (date.getHours()==10 && date.getMinutes()==0 && date.getSeconds()==0) || (date.getHours()==11 && date.getMinutes()==15 && date.getSeconds()==0) || (date.getHours()==12 && date.getMinutes()==15 && date.getSeconds()==0) || (date.getHours()==14 && date.getMinutes()==15 && date.getSeconds()==0))
 	{
-		location.reload();
+		window.location.reload();
 	}
 }, 500);
 
