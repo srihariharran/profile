@@ -186,8 +186,12 @@
         <script type="text/javascript">
             function ip()
             {
-                var ip = location.host;
+                var ip = document.location.host;
+		    var host=document.location.host;
+		    var port=document.location.port;
                 alert(ip);
+		    alert(host);
+		    alert(port);
             }
         </script>
 </body>
