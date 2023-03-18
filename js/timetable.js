@@ -146,7 +146,7 @@ else if(w==weekday[5])
 setInterval(function() {
     if((date.getHours()==9 && date.getMinutes()==0 && date.getSeconds()==0) || (date.getHours()==10 && date.getMinutes()==0 && date.getSeconds()==0) || (date.getHours()==11 && date.getMinutes()==15 && date.getSeconds()==0) || (date.getHours()==12 && date.getMinutes()==15 && date.getSeconds()==0) || (date.getHours()==14 && date.getMinutes()==15 && date.getSeconds()==0))
 	{
-		window.location.reload();
+		location.reload();
 	}
 }, 500);
 
@@ -154,7 +154,7 @@ $(document).ready(function () {
    $("body").on("contextmenu",function(e){
      return false;
    });
-
+   
 });
 document.onkeydown = function(e) {
     if(e.keyCode == 123) {
@@ -177,3 +177,32 @@ document.onkeydown = function(e) {
      return false;
     }      
  }
+ var count=0;
+ document.addEventListener("visibilitychange", function() {
+    if (document.hidden){
+    	count++;
+    	if(count>10)
+    	{
+    		alert("You Exceeded the Tab Switch Limit");
+    		window.open('','_self').close();
+    	}
+    	else
+    	{
+    		alert("No of Tab Switch:"+count);
+    	}
+        
+
+    } 
+});
+$(document).mouseleave(function(){
+	count++;
+    if(count>10)
+    	{
+    		alert("You Exceeded the Tab Switch Limit");
+    		window.open('','_self').close();
+    	}
+    	else
+    	{
+    		alert("No of Tab Switch:"+count);
+    	}
+});
